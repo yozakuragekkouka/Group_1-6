@@ -8,14 +8,14 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	//ウィンドウの状態を設定
 	ChangeWindowMode(true);
 
+	//画面サイズを設定
+	SetGraphMode(SCREEN_SIZE_X, SCREEN_SIZE_Y, 32);
+
 	//初期化処理
 	if (DxLib_Init() == -1)
 	{
 		return -1;
 	}
-
-	//画面サイズを設定
-	SetGraphMode(SCREEN_SIZE_X, SCREEN_SIZE_Y, 32);
 
 	//描画するスクリーンを裏に設定
 	SetDrawScreen(DX_SCREEN_BACK);
