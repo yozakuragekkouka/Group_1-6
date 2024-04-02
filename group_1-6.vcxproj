@@ -23,6 +23,10 @@
     <ClCompile Include="Src\Nishi\FrameRate\FrameRate.cpp" />
     <ClCompile Include="Src\Nishi\Input\Input.cpp" />
     <ClCompile Include="Src\Nishi\NumberFont\NumberFont.cpp" />
+    <ClCompile Include="Src\Nishi\Scene\Scene.cpp" />
+    <ClCompile Include="Src\Nishi\Scene\ScenePlay.cpp" />
+    <ClCompile Include="Src\Nishi\Scene\SceneResult.cpp" />
+    <ClCompile Include="Src\Nishi\Scene\SceneTitle.cpp" />
     <ClCompile Include="Src\Nishi\Shapes\Shapes.cpp" />
     <ClCompile Include="Src\Nishi\Vector\Vector.cpp" />
   </ItemGroup>
@@ -32,6 +36,10 @@
     <ClInclude Include="Src\Nishi\Input\Input.h" />
     <ClInclude Include="Src\Nishi\NumberFont\NumberFont.h" />
     <ClInclude Include="Src\Nishi\NumberFont\NumberFontData.h" />
+    <ClInclude Include="Src\Nishi\Scene\Scene.h" />
+    <ClInclude Include="Src\Nishi\Scene\ScenePlay.h" />
+    <ClInclude Include="Src\Nishi\Scene\SceneResult.h" />
+    <ClInclude Include="Src\Nishi\Scene\SceneTitle.h" />
     <ClInclude Include="Src\Nishi\Shapes\Shapes.h" />
     <ClInclude Include="Src\Nishi\Vector\Vector.h" />
   </ItemGroup>

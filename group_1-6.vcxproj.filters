@@ -28,6 +28,9 @@
     <Filter Include="FrameRate">
       <UniqueIdentifier>{bd109622-d1f2-4b79-b632-8ffee1550452}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{0bb086b4-9c71-42a4-994e-b7f216c1046b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
@@ -47,6 +50,18 @@
     </ClCompile>
     <ClCompile Include="Src\Nishi\FrameRate\FrameRate.cpp">
       <Filter>FrameRate</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\Scene\Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\Scene\ScenePlay.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\Scene\SceneResult.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\Scene\SceneTitle.cpp">
+      <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +85,18 @@
     </ClInclude>
     <ClInclude Include="Src\Nishi\FrameRate\FrameRate.h">
       <Filter>FrameRate</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\Scene\Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\Scene\ScenePlay.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\Scene\SceneResult.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\Scene\SceneTitle.h">
+      <Filter>Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

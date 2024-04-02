@@ -4,6 +4,7 @@
 #include "Nishi/FrameRate/FrameRate.h"
 #include "Nishi/NumberFont/NumberFont.h"
 #include "Nishi/NumberFont/NumberFontData.h"
+#include "Nishi/Scene/Scene.h"
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
@@ -26,6 +27,9 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	/*最初に１度だけやる処理*/
 	Input::AllInputInit();
 
+	SceneManager scene_manager;
+	scene_manager.SceneInit();
+
 	//ゲームのメインループ
 	while (ProcessMessage() != -1)
 	{
@@ -43,7 +47,10 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 			ClearDrawScreen();
 
 			// ↓ メインの処理
-
+			if (scene_manager.SceneLoop())
+			{
+				break;
+			}
 
 			//FPS計算
 			CalcFPS();
@@ -57,7 +64,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	}
 
 	/*最後に１度だけやる処理*/
-
+	scene_manager.SceneFin();
 
 	//DxLibの後処理
 	DxLib_End();
