@@ -1,7 +1,9 @@
 #include "DxLib.h"
-
-#define SCREEN_SIZE_X 960	//画面サイズ 横
-#define SCREEN_SIZE_Y 640	//画面サイズ 縦
+#include "Common.h"
+#include "Nishi/Input/Input.h"
+#include "Nishi/FrameRate/FrameRate.h"
+#include "Nishi/NumberFont/NumberFont.h"
+#include "Nishi/NumberFont/NumberFontData.h"
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
@@ -22,25 +24,36 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 
 	/*最初に１度だけやる処理*/
-
+	Input::AllInputInit();
 
 	//ゲームのメインループ
 	while (ProcessMessage() != -1)
 	{
-		//エスケープキーで終了
-		if (CheckHitKey(KEY_INPUT_ESCAPE))
+		if (FrameRateAdmin())
 		{
-			break;
+			Input::Get_Key_Input_Log();
+
+			//エスケープキーで終了
+			if (CheckHitKey(KEY_INPUT_ESCAPE))
+			{
+				break;
+			}
+
+			//画面を初期化
+			ClearDrawScreen();
+
+			// ↓ メインの処理
+
+
+			//FPS計算
+			CalcFPS();
+
+			//FPS表示
+			DrawFPS();
+
+			// 1ループ終了
+			ScreenFlip();
 		}
-
-		//画面を初期化
-		ClearDrawScreen();
-
-		// ↓ メインの処理
-
-
-		// 1ループ終了
-		ScreenFlip();
 	}
 
 	/*最後に１度だけやる処理*/

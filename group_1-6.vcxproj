@@ -20,6 +20,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="Src\Nishi\FrameRate\FrameRate.cpp" />
+    <ClCompile Include="Src\Nishi\Input\Input.cpp" />
+    <ClCompile Include="Src\Nishi\NumberFont\NumberFont.cpp" />
+    <ClCompile Include="Src\Nishi\Shapes\Shapes.cpp" />
+    <ClCompile Include="Src\Nishi\Vector\Vector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Common.h" />
+    <ClInclude Include="Src\Nishi\FrameRate\FrameRate.h" />
+    <ClInclude Include="Src\Nishi\Input\Input.h" />
+    <ClInclude Include="Src\Nishi\NumberFont\NumberFont.h" />
+    <ClInclude Include="Src\Nishi\NumberFont\NumberFontData.h" />
+    <ClInclude Include="Src\Nishi\Shapes\Shapes.h" />
+    <ClInclude Include="Src\Nishi\Vector\Vector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

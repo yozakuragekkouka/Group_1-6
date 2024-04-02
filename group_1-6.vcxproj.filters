@@ -13,10 +13,63 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{c50fcbf8-6328-4b9d-803e-7c2a93cdc74a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector">
+      <UniqueIdentifier>{cc23c192-00c0-4b25-9a74-5b137ff25dc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NumberFont">
+      <UniqueIdentifier>{6d5de77a-aba9-40d8-b994-6894d4c1284b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shapes">
+      <UniqueIdentifier>{a18cea43-24b6-48b7-ac4b-cba3efc5a98f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameRate">
+      <UniqueIdentifier>{bd109622-d1f2-4b79-b632-8ffee1550452}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Nishi\NumberFont\NumberFont.cpp">
+      <Filter>NumberFont</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\Shapes\Shapes.cpp">
+      <Filter>Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\Input\Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\Vector\Vector.cpp">
+      <Filter>Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishi\FrameRate\FrameRate.cpp">
+      <Filter>FrameRate</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Common.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\NumberFont\NumberFont.h">
+      <Filter>NumberFont</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\NumberFont\NumberFontData.h">
+      <Filter>NumberFont</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\Shapes\Shapes.h">
+      <Filter>Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\Input\Input.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\Vector\Vector.h">
+      <Filter>Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishi\FrameRate\FrameRate.h">
+      <Filter>FrameRate</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
