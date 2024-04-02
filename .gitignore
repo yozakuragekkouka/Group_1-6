@@ -1,0 +1,3 @@
+# .vs、Debugフォルダを除外
+.vs/
+Debug/
