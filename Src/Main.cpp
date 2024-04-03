@@ -1,10 +1,10 @@
 #include "DxLib.h"
 #include "Common.h"
-#include "Nishi/Input/Input.h"
-#include "Nishi/FrameRate/FrameRate.h"
-#include "Nishi/NumberFont/NumberFont.h"
-#include "Nishi/NumberFont/NumberFontData.h"
-#include "Nishi/Scene/Scene.h"
+#include "Nishiyama/Input/Input.h"
+#include "Nishiyama/FrameRate/FrameRate.h"
+#include "Nishiyama/NumberFont/NumberFont.h"
+#include "Nishiyama/NumberFont/NumberFontData.h"
+#include "Nishiyama/Scene/Scene.h"
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {

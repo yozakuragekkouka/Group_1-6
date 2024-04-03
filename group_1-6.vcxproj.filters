@@ -36,67 +36,67 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Nishi\NumberFont\NumberFont.cpp">
-      <Filter>NumberFont</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Nishi\Shapes\Shapes.cpp">
-      <Filter>Shapes</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Nishi\Input\Input.cpp">
-      <Filter>Input</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Nishi\Vector\Vector.cpp">
-      <Filter>Vector</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Nishi\FrameRate\FrameRate.cpp">
+    <ClCompile Include="Src\Nishiyama\FrameRate\FrameRate.cpp">
       <Filter>FrameRate</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Nishi\Scene\Scene.cpp">
+    <ClCompile Include="Src\Nishiyama\Input\Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishiyama\NumberFont\NumberFont.cpp">
+      <Filter>NumberFont</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishiyama\Scene\Scene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Nishi\Scene\ScenePlay.cpp">
+    <ClCompile Include="Src\Nishiyama\Scene\ScenePlay.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Nishi\Scene\SceneResult.cpp">
+    <ClCompile Include="Src\Nishiyama\Scene\SceneResult.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Nishi\Scene\SceneTitle.cpp">
+    <ClCompile Include="Src\Nishiyama\Scene\SceneTitle.cpp">
       <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishiyama\Shapes\Shapes.cpp">
+      <Filter>Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishiyama\Vector\Vector.cpp">
+      <Filter>Vector</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Nishi\NumberFont\NumberFont.h">
-      <Filter>NumberFont</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Nishi\NumberFont\NumberFontData.h">
-      <Filter>NumberFont</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Nishi\Shapes\Shapes.h">
-      <Filter>Shapes</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Nishi\Input\Input.h">
-      <Filter>Input</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Nishi\Vector\Vector.h">
-      <Filter>Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Nishi\FrameRate\FrameRate.h">
+    <ClInclude Include="Src\Nishiyama\FrameRate\FrameRate.h">
       <Filter>FrameRate</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Nishi\Scene\Scene.h">
+    <ClInclude Include="Src\Nishiyama\Input\Input.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\NumberFont\NumberFont.h">
+      <Filter>NumberFont</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\NumberFont\NumberFontData.h">
+      <Filter>NumberFont</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\Scene\Scene.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Nishi\Scene\ScenePlay.h">
+    <ClInclude Include="Src\Nishiyama\Scene\ScenePlay.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Nishi\Scene\SceneResult.h">
+    <ClInclude Include="Src\Nishiyama\Scene\SceneResult.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Nishi\Scene\SceneTitle.h">
+    <ClInclude Include="Src\Nishiyama\Scene\SceneTitle.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\Shapes\Shapes.h">
+      <Filter>Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\Vector\Vector.h">
+      <Filter>Vector</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

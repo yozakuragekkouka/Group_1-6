@@ -20,28 +20,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="Src\Nishi\FrameRate\FrameRate.cpp" />
-    <ClCompile Include="Src\Nishi\Input\Input.cpp" />
-    <ClCompile Include="Src\Nishi\NumberFont\NumberFont.cpp" />
-    <ClCompile Include="Src\Nishi\Scene\Scene.cpp" />
-    <ClCompile Include="Src\Nishi\Scene\ScenePlay.cpp" />
-    <ClCompile Include="Src\Nishi\Scene\SceneResult.cpp" />
-    <ClCompile Include="Src\Nishi\Scene\SceneTitle.cpp" />
-    <ClCompile Include="Src\Nishi\Shapes\Shapes.cpp" />
-    <ClCompile Include="Src\Nishi\Vector\Vector.cpp" />
+    <ClCompile Include="Src\Nishiyama\FrameRate\FrameRate.cpp" />
+    <ClCompile Include="Src\Nishiyama\Input\Input.cpp" />
+    <ClCompile Include="Src\Nishiyama\NumberFont\NumberFont.cpp" />
+    <ClCompile Include="Src\Nishiyama\Scene\Scene.cpp" />
+    <ClCompile Include="Src\Nishiyama\Scene\ScenePlay.cpp" />
+    <ClCompile Include="Src\Nishiyama\Scene\SceneResult.cpp" />
+    <ClCompile Include="Src\Nishiyama\Scene\SceneTitle.cpp" />
+    <ClCompile Include="Src\Nishiyama\Shapes\Shapes.cpp" />
+    <ClCompile Include="Src\Nishiyama\Vector\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h" />
-    <ClInclude Include="Src\Nishi\FrameRate\FrameRate.h" />
-    <ClInclude Include="Src\Nishi\Input\Input.h" />
-    <ClInclude Include="Src\Nishi\NumberFont\NumberFont.h" />
-    <ClInclude Include="Src\Nishi\NumberFont\NumberFontData.h" />
-    <ClInclude Include="Src\Nishi\Scene\Scene.h" />
-    <ClInclude Include="Src\Nishi\Scene\ScenePlay.h" />
-    <ClInclude Include="Src\Nishi\Scene\SceneResult.h" />
-    <ClInclude Include="Src\Nishi\Scene\SceneTitle.h" />
-    <ClInclude Include="Src\Nishi\Shapes\Shapes.h" />
-    <ClInclude Include="Src\Nishi\Vector\Vector.h" />
+    <ClInclude Include="Src\Nishiyama\FrameRate\FrameRate.h" />
+    <ClInclude Include="Src\Nishiyama\Input\Input.h" />
+    <ClInclude Include="Src\Nishiyama\NumberFont\NumberFont.h" />
+    <ClInclude Include="Src\Nishiyama\NumberFont\NumberFontData.h" />
+    <ClInclude Include="Src\Nishiyama\Scene\Scene.h" />
+    <ClInclude Include="Src\Nishiyama\Scene\ScenePlay.h" />
+    <ClInclude Include="Src\Nishiyama\Scene\SceneResult.h" />
+    <ClInclude Include="Src\Nishiyama\Scene\SceneTitle.h" />
+    <ClInclude Include="Src\Nishiyama\Shapes\Shapes.h" />
+    <ClInclude Include="Src\Nishiyama\Vector\Vector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
