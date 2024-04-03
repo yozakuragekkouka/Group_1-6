@@ -37,9 +37,6 @@
     <Filter Include="Score\ScoreManager">
       <UniqueIdentifier>{743ab1a1-9af4-49cf-812d-34b1a85161b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Score\ScoreBase">
-      <UniqueIdentifier>{75ecd360-9365-4443-b5b2-8bbdb0b4b4bd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Interval">
       <UniqueIdentifier>{87090e6f-2f8c-4dd1-8bbc-8b35cddc7646}</UniqueIdentifier>
     </Filter>
@@ -51,6 +48,12 @@
     </Filter>
     <Filter Include="MiniGame\MiniGameManager">
       <UniqueIdentifier>{37fa23f3-862a-4fde-b89c-0ff5c3937edb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Score\Score">
+      <UniqueIdentifier>{75ecd360-9365-4443-b5b2-8bbdb0b4b4bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameState">
+      <UniqueIdentifier>{9a719b49-da41-440e-81bd-ba3192f774dd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +90,6 @@
     <ClCompile Include="Src\Nishiyama\Score\ScoreManager\ScoreManager.cpp">
       <Filter>Score\ScoreManager</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Nishiyama\Score\ScoreBase\ScoreBase.cpp">
-      <Filter>Score\ScoreBase</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Nishiyama\Interval\Interval.cpp">
       <Filter>Interval</Filter>
     </ClCompile>
@@ -98,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="Src\Nishiyama\MiniGame\MiniGameBase\MiniGameBase.cpp">
       <Filter>MiniGame\MiniGameBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishiyama\Score\Score\Score.cpp">
+      <Filter>Score\Score</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -137,9 +140,6 @@
     <ClInclude Include="Src\Nishiyama\Score\ScoreManager\ScoreManager.h">
       <Filter>Score\ScoreManager</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Nishiyama\Score\ScoreBase\ScoreBase.h">
-      <Filter>Score\ScoreBase</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Nishiyama\Interval\Interval.h">
       <Filter>Interval</Filter>
     </ClInclude>
@@ -148,6 +148,12 @@
     </ClInclude>
     <ClInclude Include="Src\Nishiyama\MiniGame\MiniGameBase\MiniGameBase.h">
       <Filter>MiniGame\MiniGameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\Score\Score\Score.h">
+      <Filter>Score\Score</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\GameState\GameState.h">
+      <Filter>GameState</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

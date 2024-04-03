@@ -1,5 +1,8 @@
 #include "DxLib.h"
 #include "Scene.h"
+#include "SceneTitle.h"
+#include "ScenePlay.h"
+#include "SceneResult.h"
 
 SCENEID SceneManager::SceneManager::g_CurrenySceneID;	//Œ»İ‚ÌƒV[ƒ“ID
 
