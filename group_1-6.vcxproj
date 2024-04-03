@@ -22,11 +22,16 @@
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="Src\Nishiyama\FrameRate\FrameRate.cpp" />
     <ClCompile Include="Src\Nishiyama\Input\Input.cpp" />
+    <ClCompile Include="Src\Nishiyama\Interval\Interval.cpp" />
+    <ClCompile Include="Src\Nishiyama\MiniGame\MiniGameBase\MiniGameBase.cpp" />
+    <ClCompile Include="Src\Nishiyama\MiniGame\MiniGameManager\MiniGameManager.cpp" />
     <ClCompile Include="Src\Nishiyama\NumberFont\NumberFont.cpp" />
     <ClCompile Include="Src\Nishiyama\Scene\Scene.cpp" />
     <ClCompile Include="Src\Nishiyama\Scene\ScenePlay.cpp" />
     <ClCompile Include="Src\Nishiyama\Scene\SceneResult.cpp" />
     <ClCompile Include="Src\Nishiyama\Scene\SceneTitle.cpp" />
+    <ClCompile Include="Src\Nishiyama\Score\ScoreBase\ScoreBase.cpp" />
+    <ClCompile Include="Src\Nishiyama\Score\ScoreManager\ScoreManager.cpp" />
     <ClCompile Include="Src\Nishiyama\Shapes\Shapes.cpp" />
     <ClCompile Include="Src\Nishiyama\Vector\Vector.cpp" />
   </ItemGroup>
@@ -34,12 +39,17 @@
     <ClInclude Include="Src\Common.h" />
     <ClInclude Include="Src\Nishiyama\FrameRate\FrameRate.h" />
     <ClInclude Include="Src\Nishiyama\Input\Input.h" />
+    <ClInclude Include="Src\Nishiyama\Interval\Interval.h" />
+    <ClInclude Include="Src\Nishiyama\MiniGame\MiniGameBase\MiniGameBase.h" />
+    <ClInclude Include="Src\Nishiyama\MiniGame\MiniGameManager\MiniGameManager.h" />
     <ClInclude Include="Src\Nishiyama\NumberFont\NumberFont.h" />
     <ClInclude Include="Src\Nishiyama\NumberFont\NumberFontData.h" />
     <ClInclude Include="Src\Nishiyama\Scene\Scene.h" />
     <ClInclude Include="Src\Nishiyama\Scene\ScenePlay.h" />
     <ClInclude Include="Src\Nishiyama\Scene\SceneResult.h" />
     <ClInclude Include="Src\Nishiyama\Scene\SceneTitle.h" />
+    <ClInclude Include="Src\Nishiyama\Score\ScoreBase\ScoreBase.h" />
+    <ClInclude Include="Src\Nishiyama\Score\ScoreManager\ScoreManager.h" />
     <ClInclude Include="Src\Nishiyama\Shapes\Shapes.h" />
     <ClInclude Include="Src\Nishiyama\Vector\Vector.h" />
   </ItemGroup>
