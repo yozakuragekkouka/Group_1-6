@@ -4,7 +4,7 @@
 
 #define LINEY 400.0f
 
-void MiniGame::Init() {
+void JustStop::Init() {
 	handle = LoadGraph("Data/Image/");
 	IsPush = false;
 	X = 0.0f;
@@ -12,7 +12,7 @@ void MiniGame::Init() {
 	LineY = LINEY;
 }
 
-void MiniGame::Play() {
+void JustStop::Play() {
 	//ボタンが押されたら下降をストップ
 	if (Input::IsKeyPush(KEY_INPUT_A)) {
 		IsPush = true;
@@ -34,21 +34,21 @@ void MiniGame::Play() {
 	}
 }
 
-void MiniGame::Draw() {
+void JustStop::Draw() {
 	if (!(GetDistance(Y, LineY) < 0)) {//矩形が線を越えていなければ
 		DrawGraph(X, Y, handle, true);
 	}
 }
 
-void MiniGame::Fin() {
+void JustStop::Fin() {
 	DeleteGraph(handle);
 }
 
-float MiniGame::GetDistance(float rectY, float lineY) {
+float JustStop::GetDistance(float rectY, float lineY) {
 	return lineY - rectY;
 }
 
-float MiniGame::GetPoint(float dist) {
+float JustStop::GetPoint(float dist) {
 	int point = 0;
 	float i = LINEY / 100.0f;
 

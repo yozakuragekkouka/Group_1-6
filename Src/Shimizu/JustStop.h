@@ -1,7 +1,7 @@
 #pragma once
 #include "../../Src/Nishiyama/MiniGame/MiniGameBase/MiniGameBase.h"
 
-class MiniGame : public MiniGameBase{
+class JustStop : public MiniGameBase{
 protected:
 	bool IsPush;//ƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½‚©
 	int handle;
