@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "JustStop.h"
 #include "../Nishiyama/Input/Input.h"
 #include "../Nishiyama/Shapes/Shapes.h"
 
