@@ -7,6 +7,8 @@
 class ScenePlay : public SceneBase
 {
 private:
+	int now_playerNumber;
+	GameState gameState;
 	Interval interval;
 	MiniGameManager minigame_manager;
 
@@ -15,4 +17,6 @@ public:
 	void Step();
 	void Draw();
 	void Fin();
+
+
 };

@@ -8,8 +8,14 @@ private:
 	MiniGameBase* miniGame;
 
 public:
-	void Init() { return; }
-	int Step() { return 0; }
-	void Draw() { return; }
-	void Fin() { return; }
+	void Init();
+	void Step();
+	void Draw();
+	void Fin();
+
+	void Set_NewGame();
+	void Delete_Game();
+
+	bool Get_MiniGameisFinish() { return miniGame->GetisFinish(); }
+	bool Get_MiniGameisClear() { return miniGame->GetisClear(); }
 };
