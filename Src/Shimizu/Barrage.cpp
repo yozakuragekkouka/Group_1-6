@@ -5,16 +5,16 @@
 const int MAX_COUNT = 60;
 
 void Barrage::Init() {
-	StartCount = 180.0f;
+	Startlimit = 210.0f;//開始まで3秒+START表示の猶予(0.5秒)
 	count = MAX_COUNT;
 	time = 300.0f;	//5秒
 	handle = LoadGraph("Data/Image/");
 }
 
 void Barrage::Play() {
-	StartCount--;//スタートまでのカウントダウン
+	Startlimit--;//スタートまでのカウントダウン
 
-	if (StartCount <= 0) {
+	if (Startlimit <= 0) {
 		time--;
 		if (!isClear) {
 			if (Input::IsKeyPush(KEY_INPUT_SPACE)) {//指定のキーが押されるたびにカウントをマイナス

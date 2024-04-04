@@ -4,7 +4,7 @@
 
 class Barrage : public MiniGameBase {
 private:
-	float StartCount;//開始までのカウントダウン
+	float Startlimit;//開始までのカウントダウン
 	int	  count;	 //連打回数
 	float time;		 //制限時間
 	int	  handle;
