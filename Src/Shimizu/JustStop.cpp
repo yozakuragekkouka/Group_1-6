@@ -3,6 +3,7 @@
 #include "../Nishiyama/Shapes/Shapes.h"
 
 #define LINEY 400.0f
+#define HEIGHT 20
 
 void JustStop::Init() {
 	handle = LoadGraph("Data/Image/");
@@ -10,32 +11,38 @@ void JustStop::Init() {
 	X = 0.0f;
 	Y = 0.0f;
 	LineY = LINEY;
+	Startlimit = 210.0f;
 }
 
 void JustStop::Play() {
-	//ボタンが押されたら下降をストップ
-	if (Input::IsKeyPush(KEY_INPUT_A)) {
-		IsPush = true;
-	}
+	Startlimit--;
+	if (Startlimit <= 0) {
+		//ボタンが押されたら下降をストップ
+		if (Input::IsKeyPush(KEY_INPUT_A)) {
+			IsPush = true;
+		}
 
-	//IsPushが押されるまで下降する
-	if (!IsPush) {
-		Y++;
-	}
-	else//下降が止まれば終了
-		isFinish = true;
+		//IsPushが押されるまで下降する
+		if (!IsPush) {
+			Y += 5;
+		}
+		else//下降が止まれば終了
+			isFinish = true;
 
-	if (GetDistance(Y, LineY) < 0) {//矩形が線を越えたら終了
-		isFinish = true;
-	}
+		if (GetDistance(Y, LineY, HEIGHT) < 0) {//矩形が線を越えたら終了
+			isFinish = true;
+		}
 
-	if (isFinish) {//ゲームが終了したらポイントを取得する
-		GetPoint(GetDistance(Y, LineY));
+		if (isFinish) {//ゲームが終了したらポイントを取得する
+			GetPoint(GetDistance(Y, LineY, HEIGHT));//代入
+		}
 	}
 }
 
 void JustStop::Draw() {
-	if (!(GetDistance(Y, LineY) < 0)) {//矩形が線を越えていなければ
+	CountDown();
+
+	if (!(GetDistance(Y, LineY,HEIGHT) < 0)) {//矩形が線を越えていなければ
 		DrawGraph(X, Y, handle, true);
 	}
 }
@@ -44,18 +51,18 @@ void JustStop::Fin() {
 	DeleteGraph(handle);
 }
 
-float JustStop::GetDistance(float rectY, float lineY) {
-	return lineY - rectY;
+float JustStop::GetDistance(float rectY, float lineY, float height) {
+	return lineY - (height + rectY);
 }
 
 float JustStop::GetPoint(float dist) {
 	int point = 0;
 	float i = LINEY / 100.0f;
 
-	if (dist == 0) {
+	if (dist >= 0 && dist < 5 * i) {
 		point = 100;
 	}
-	if (dist >= 0 && dist < 20 * i) {
+	if (dist >= 5 && dist < 20 * i) {
 		point = 80;
 	}
 	if (dist >= 20 * i && dist < 40 * i) {
@@ -75,4 +82,20 @@ float JustStop::GetPoint(float dist) {
 	}
 
 	return point;
+}
+
+void JustStop::CountDown() {
+	//3,2,1のカウントダウン画像を配列で順番に表示
+	if (Startlimit <= 210.0f && Startlimit > 150.0f) {	//3
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "3");
+	}
+	if (Startlimit <= 150.0f && Startlimit > 90.0f) {	//2
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "2");
+	}
+	if (Startlimit <= 90.0f && Startlimit > 30.0f) {	//1
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "1");
+	}
+	if (Startlimit <= 30.0f && Startlimit > 0.0f) {		//start
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "start");
+	}
 }

@@ -26,12 +26,12 @@ void Barrage::Play() {
 
 	if (time <= 0.0f || count <= 0) {//タイムオーバー or カウントが0で終了
 		isFinish = true;
+		/* = GetPoint(count);*/
 	}
-
-	/* = GetPoint(count);*/
 }
 
 void Barrage::Draw() {
+	CountDown();
 	switch (GetPoint(count)) {
 	case 0:
 		//カウントフル
@@ -93,4 +93,20 @@ int Barrage::GetPoint(int count) {
 	}
 
 	return point;
+}
+
+void Barrage::CountDown() {
+	//3,2,1のカウントダウン画像を配列で順番に表示
+	if (Startlimit <= 210.0f && Startlimit > 150.0f) {	//3
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "3");
+	}
+	if (Startlimit <= 150.0f && Startlimit > 90.0f) {	//2
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "2");
+	}
+	if (Startlimit <= 90.0f && Startlimit > 30.0f) {	//1
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "1");
+	}
+	if (Startlimit <= 30.0f && Startlimit > 0.0f) {		//start
+		DrawFormatString(100, 100, GetColor(255, 255, 255), "start");
+	}
 }

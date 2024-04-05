@@ -16,4 +16,5 @@ public:
 	void Fin();
 
 	int GetPoint(int count);
+	void CountDown();
 };

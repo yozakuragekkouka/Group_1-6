@@ -16,4 +16,8 @@ public:
 	void Fin();
 
 	float GetPoint(float TimeCount);//‰Ÿ‚³‚ê‚é‚Ü‚Å‚ÌŠÔ‚ğˆø”‚É‚µ‚Äƒ|ƒCƒ“ƒg‚ğ•Ô‹p
+
+	void CountDown();
+
+	float ScopingRand(float min, float max);
 };
