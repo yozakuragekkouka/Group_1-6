@@ -5,6 +5,7 @@ class SceneTitle : public SceneBase
 {
 private:
 
+
 public:
 	void Init();
 
