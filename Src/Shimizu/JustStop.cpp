@@ -18,7 +18,7 @@ void JustStop::Play() {
 	Startlimit--;
 	if (Startlimit <= 0) {
 		//ボタンが押されたら下降をストップ
-		if (Input::IsKeyPush(KEY_INPUT_A)) {
+		if ((GetMouseInput() & MOUSE_INPUT_LEFT)) {
 			IsPush = true;
 		}
 
