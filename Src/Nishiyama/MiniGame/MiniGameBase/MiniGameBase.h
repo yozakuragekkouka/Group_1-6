@@ -17,7 +17,7 @@ protected:
 public:
 	MiniGameBase();
 
-	virtual void Init() { return; }
+	virtual void Init() { isClear = true; isFinish = true; return; }
 	virtual void Step() { return; }
 	virtual void Draw() { return; }
 	virtual void Fin() { return; }

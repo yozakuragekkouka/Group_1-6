@@ -33,6 +33,7 @@
     <ClCompile Include="Src\Nishiyama\Score\ScoreManager\ScoreManager.cpp" />
     <ClCompile Include="Src\Nishiyama\Score\Score\Score.cpp" />
     <ClCompile Include="Src\Nishiyama\Shapes\Shapes.cpp" />
+    <ClCompile Include="Src\Nishiyama\Sound\Sound.cpp" />
     <ClCompile Include="Src\Nishiyama\Vector\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +53,7 @@
     <ClInclude Include="Src\Nishiyama\Score\ScoreManager\ScoreManager.h" />
     <ClInclude Include="Src\Nishiyama\Score\Score\Score.h" />
     <ClInclude Include="Src\Nishiyama\Shapes\Shapes.h" />
+    <ClInclude Include="Src\Nishiyama\Sound\Sound.h" />
     <ClInclude Include="Src\Nishiyama\Vector\Vector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
