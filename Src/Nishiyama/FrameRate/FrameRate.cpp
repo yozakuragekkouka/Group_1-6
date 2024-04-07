@@ -21,7 +21,7 @@ bool FrameRateAdmin()
 	if (frameRateInfo.calcFpsTime == 0.0f)
 	{
 		FrameNumData.Init();
-		FrameNumData.SetNumberFont(Number_6_12_white);
+		FrameNumData.SetNumberFont(Number_6_12_black);
 		FrameNumData.Set_posX(SCREEN_SIZE_X);
 		FrameNumData.Set_posY(SCREEN_SIZE_Y);
 
