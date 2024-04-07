@@ -1,6 +1,7 @@
 #include "DxLib.h"
 #include "Common.h"
 #include "Nishiyama/Input/Input.h"
+#include "Nishiyama/Sound/Sound.h"
 #include "Nishiyama/FrameRate/FrameRate.h"
 #include "Nishiyama/NumberFont/NumberFont.h"
 #include "Nishiyama/NumberFont/NumberFontData.h"
@@ -27,6 +28,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	/*最初に１度だけやる処理*/
 	Input::AllInputInit();
 
+	SoundEffect::Init();
+
 	SceneManager scene_manager;
 	scene_manager.SceneInit();
 
@@ -35,7 +38,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	{
 		if (FrameRateAdmin())
 		{
-			Input::Get_Key_Input_Log();
+			Input::AllInputDataSet();
 
 			//エスケープキーで終了
 			if (CheckHitKey(KEY_INPUT_ESCAPE))
@@ -65,6 +68,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 	/*最後に１度だけやる処理*/
 	scene_manager.SceneFin();
+
+	SoundEffect::Fin();
 
 	//DxLibの後処理
 	DxLib_End();

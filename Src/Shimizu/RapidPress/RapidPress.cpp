@@ -27,12 +27,12 @@ void RapidPress::Play() {
 			}
 
 			if (AppearTime < AppearTiming) {//フライングの処理
-				if (Input::IsKeyPush(KEY_INPUT_A)) {//キーが押されたらカウントを止める
+				if ((GetMouseInput() & MOUSE_INPUT_LEFT)) {//キーが押されたらカウントを止める
 					FlyingStart = true;
 				}
 			}
 
-			if (IsKeyPush(KEY_INPUT_A)) {
+			if ((GetMouseInput() & MOUSE_INPUT_LEFT)) {
 				IsPush = true;
 			}
 		}

@@ -57,13 +57,16 @@ void ScenePlay::Step()
 		switch (gameState)
 		{
 		case GameState::Continue:
-			if (interval.GetState() == IntervalState::End_MiniGame)
+			if (interval.GetState() == IntervalState::Stay_MiniGame)
 			{
 				interval.Step();
-				if (interval.GetState() == IntervalState::Stay_MiniGame)
+				if (interval.GetState() == IntervalState::Start_MiniGame)
 				{
+					minigame_manager.MiniGameFin();
 					minigame_manager.Delete_Game();
 					minigame_manager.Set_NewGame();
+
+					minigame_manager.MiniGameInit();
 				}
 			}
 			else

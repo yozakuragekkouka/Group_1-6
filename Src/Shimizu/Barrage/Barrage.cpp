@@ -2,13 +2,14 @@
 #include "../Nishiyama/Input/Input.h"
 #include "../Nishiyama/Shapes/Shapes.h"
 
-const int MAX_COUNT = 60;
+const int MAX_COUNT = 40;
 
 void Barrage::Init() {
 	Startlimit = 210.0f;//ŠJŽn‚Ü‚Å3•b+START•\Ž¦‚Ì—P—\(0.5•b)
 	count = MAX_COUNT;
 	time = 300.0f;	//5•b
 	handle = LoadGraph("Data/Image/");
+	click_flag = false;
 }
 
 void Barrage::Play() {
@@ -73,19 +74,16 @@ int Barrage::GetPoint(int count) {
 	if (count == MAX_COUNT) {
 		point = 0;
 	}
-	if (count < MAX_COUNT && count >= 40){
-		point = 10;
-	}
-	if (count < 40 && count >= 30) {
+	if (count < MAX_COUNT && count >= MAX_COUNT - 10) {
 		point = 20;
 	}
-	if (count < 30 && count >= 20) {
+	if (count < MAX_COUNT - 10 && count >= MAX_COUNT - 20) {
 		point = 40;
 	}
-	if (count < 20 && count >= 10) {
+	if (count < MAX_COUNT - 20 && count >= MAX_COUNT - 30) {
 		point = 60;
 	}
-	if (count < 10 && count >= 0) {
+	if (count < MAX_COUNT - 30 && count > MAX_COUNT - 40) {
 		point = 80;
 	}
 	if (count <= 0) {
@@ -108,5 +106,27 @@ void Barrage::CountDown() {
 	}
 	if (Startlimit <= 30.0f && Startlimit > 0.0f) {		//start
 		DrawFormatString(100, 100, GetColor(255, 255, 255), "start");
+	}
+}
+
+bool Barrage::IsClick()
+{
+	//‹éŒ`‚Ì’†‚É‚ ‚é
+	if ((GetMouseInput() & MOUSE_INPUT_LEFT) != 0)
+	{
+		//‰Ÿ‚³‚ê‚Ä‚¢‚é
+		if (click_flag == false)
+		{
+			//‰Ÿ‚³‚ê‚Â‚Ã‚¯‚Ä‚¢‚È‚¢
+			click_flag = true;
+			return true;
+		}
+		return false;
+	}
+	else
+	{
+		//‰Ÿ‚³‚ê‚Ä‚¢‚È‚¢
+		click_flag = false;
+		return false;
 	}
 }

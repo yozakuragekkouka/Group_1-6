@@ -13,6 +13,9 @@ public:
 	void Draw();
 	void Fin();
 
+	void MiniGameInit();
+	void MiniGameFin();
+
 	void Set_NewGame();
 	void Delete_Game();
 

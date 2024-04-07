@@ -1,5 +1,10 @@
 #pragma once
 #include "../GameState/GameState.h"
+#include "../Shapes/Shapes.h"
+
+constexpr char INTERVAL_BG_PATH[128] = "Data/Oda/BackGround/Play.png";
+
+constexpr char INTERVAL_PLAYER_PATH[128] = "Data/Oda/Player/SoloPlayer.png";
 
 constexpr int MINIGAME_STAY_FRAME = 120;
 constexpr int MINIGAME_START_FRAME = 120;
@@ -17,6 +22,10 @@ enum class IntervalState
 class Interval
 {
 private:
+	Rect_Data BG_Image;
+
+	Rect_Data playerImage;
+
 	IntervalState state;
 	int intervalFrameCount;
 

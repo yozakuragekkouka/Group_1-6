@@ -26,6 +26,7 @@ void MiniGameManager::Fin()
 	if (miniGame != nullptr)
 	{
 		delete miniGame;
+		miniGame = nullptr;
 	}
 }
 
@@ -33,7 +34,7 @@ void MiniGameManager::Set_NewGame()
 {
 	if (miniGame == nullptr)
 	{
-
+		miniGame = new MiniGameBase;
 	}
 }
 
@@ -42,5 +43,22 @@ void MiniGameManager::Delete_Game()
 	if (miniGame != nullptr)
 	{
 		delete miniGame;
+		miniGame = nullptr;
+	}
+}
+
+void MiniGameManager::MiniGameInit()
+{
+	if (miniGame != nullptr)
+	{
+		miniGame->Init();
+	}
+}
+
+void MiniGameManager::MiniGameFin()
+{
+	if (miniGame != nullptr)
+	{
+		miniGame->Fin();
 	}
 }
