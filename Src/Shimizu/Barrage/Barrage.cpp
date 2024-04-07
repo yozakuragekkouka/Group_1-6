@@ -18,7 +18,7 @@ void Barrage::Play() {
 	if (Startlimit <= 0) {
 		time--;
 		if (!isClear) {
-			if (Input::IsKeyPush(KEY_INPUT_SPACE)) {//指定のキーが押されるたびにカウントをマイナス
+			if (IsClick()) {//指定のキーが押されるたびにカウントをマイナス
 				count--;
 			}
 		}
