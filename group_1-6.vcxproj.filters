@@ -55,6 +55,9 @@
     <Filter Include="GameState">
       <UniqueIdentifier>{9a719b49-da41-440e-81bd-ba3192f774dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{e6e12dfd-7b69-4a38-9be5-581f00bd104d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
@@ -101,6 +104,9 @@
     </ClCompile>
     <ClCompile Include="Src\Nishiyama\Score\Score\Score.cpp">
       <Filter>Score\Score</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishiyama\Sound\Sound.cpp">
+      <Filter>Sound</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +160,9 @@
     </ClInclude>
     <ClInclude Include="Src\Nishiyama\GameState\GameState.h">
       <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\Sound\Sound.h">
+      <Filter>Sound</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

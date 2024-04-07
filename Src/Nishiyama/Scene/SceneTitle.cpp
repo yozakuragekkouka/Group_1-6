@@ -30,6 +30,8 @@ void SceneTitle::Step()
 {
 	if (Input::ClickRect_Center(Player[multiNum]))
 	{
+		SoundEffect::Play(SE_SELECT);
+
 		multiNum++;
 		if (multiNum >= 4)
 		{
@@ -39,6 +41,8 @@ void SceneTitle::Step()
 
 	if (Input::ClickRect_Center(TitleSoloText))
 	{
+		SoundEffect::Play(SE_SELECT);
+
 		ScoreManager::SetAll_playerNum();
 
 		SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_FIN_TITLE;
