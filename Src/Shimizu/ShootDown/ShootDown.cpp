@@ -1,4 +1,5 @@
 #include "ShootDown.h"
+#include "../../Common.h"
 #include "../../Nishiyama/Input/Input.h"
 
 void ShootDown::Init() {
@@ -7,8 +8,8 @@ void ShootDown::Init() {
 	count = 0;
 	handle = LoadGraph("Data/Image/");
 	click_flag = false;
-	RectX = ScopingRand(0, 640 - Width);
-	RectY = ScopingRand(0, 480 - Height);
+	RectX = ScopingRand(0, SCREEN_SIZE_X - Width);
+	RectY = ScopingRand(0, SCREEN_SIZE_Y - Height);
 	Limit = 0.0f;
 	IsHit = false;
 }
