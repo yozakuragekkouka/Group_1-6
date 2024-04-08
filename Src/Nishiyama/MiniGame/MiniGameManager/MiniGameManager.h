@@ -2,6 +2,14 @@
 #include "../MiniGameBase/MiniGameBase.h"
 #include "../../GameState/GameState.h"
 
+enum class MiniGameKind
+{
+	GAME_NONE = -1,
+	SearchGame,
+
+	MiniGameKindNum
+};
+
 class MiniGameManager
 {
 private:

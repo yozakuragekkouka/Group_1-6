@@ -57,13 +57,20 @@ void ScenePlay::Step()
 		switch (gameState)
 		{
 		case GameState::Continue:
-			if (interval.GetState() == IntervalState::Stay_MiniGame)
+			if (interval.GetState() == IntervalState::End_MiniGame)
+			{
+				interval.Step();
+				if (interval.GetState() == IntervalState::Stay_MiniGame)
+				{
+					minigame_manager.MiniGameFin();
+					minigame_manager.Delete_Game();
+				}
+			}
+			else if (interval.GetState() == IntervalState::Stay_MiniGame)
 			{
 				interval.Step();
 				if (interval.GetState() == IntervalState::Start_MiniGame)
 				{
-					minigame_manager.MiniGameFin();
-					minigame_manager.Delete_Game();
 					minigame_manager.Set_NewGame();
 
 					minigame_manager.MiniGameInit();
@@ -88,13 +95,16 @@ void ScenePlay::Step()
 //プレイシーン描画処理
 void ScenePlay::Draw()
 {
-	interval.Draw();
 	minigame_manager.Draw();
+	interval.Draw();
 }
 
 //プレイシーン後処理
 void ScenePlay::Fin()
 {
+	minigame_manager.MiniGameFin();
+	minigame_manager.Delete_Game();
+
 	interval.Fin();
 	minigame_manager.Fin();
 	SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_INIT_RESULT;

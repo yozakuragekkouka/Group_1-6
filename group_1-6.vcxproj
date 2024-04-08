@@ -25,6 +25,7 @@
     <ClCompile Include="Src\Nishiyama\Interval\Interval.cpp" />
     <ClCompile Include="Src\Nishiyama\MiniGame\MiniGameBase\MiniGameBase.cpp" />
     <ClCompile Include="Src\Nishiyama\MiniGame\MiniGameManager\MiniGameManager.cpp" />
+    <ClCompile Include="Src\Nishiyama\MiniGame\MiniGame_shuu\SearchGame\SearchGame.cpp" />
     <ClCompile Include="Src\Nishiyama\NumberFont\NumberFont.cpp" />
     <ClCompile Include="Src\Nishiyama\Scene\Scene.cpp" />
     <ClCompile Include="Src\Nishiyama\Scene\ScenePlay.cpp" />
@@ -44,6 +45,7 @@
     <ClInclude Include="Src\Nishiyama\Interval\Interval.h" />
     <ClInclude Include="Src\Nishiyama\MiniGame\MiniGameBase\MiniGameBase.h" />
     <ClInclude Include="Src\Nishiyama\MiniGame\MiniGameManager\MiniGameManager.h" />
+    <ClInclude Include="Src\Nishiyama\MiniGame\MiniGame_shuu\SearchGame\SearchGame.h" />
     <ClInclude Include="Src\Nishiyama\NumberFont\NumberFont.h" />
     <ClInclude Include="Src\Nishiyama\NumberFont\NumberFontData.h" />
     <ClInclude Include="Src\Nishiyama\Scene\Scene.h" />

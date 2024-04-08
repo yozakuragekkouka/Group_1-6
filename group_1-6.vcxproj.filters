@@ -58,6 +58,12 @@
     <Filter Include="Sound">
       <UniqueIdentifier>{e6e12dfd-7b69-4a38-9be5-581f00bd104d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MiniGame\MiniGame_shuu">
+      <UniqueIdentifier>{f172cd30-03cc-4f33-b194-6790ebe1e480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MiniGame\MiniGame_shuu\SearchGame">
+      <UniqueIdentifier>{b5060780-2b5d-433e-8b7a-c7ab7bcef613}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
@@ -107,6 +113,9 @@
     </ClCompile>
     <ClCompile Include="Src\Nishiyama\Sound\Sound.cpp">
       <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nishiyama\MiniGame\MiniGame_shuu\SearchGame\SearchGame.cpp">
+      <Filter>MiniGame\MiniGame_shuu\SearchGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="Src\Nishiyama\Sound\Sound.h">
       <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nishiyama\MiniGame\MiniGame_shuu\SearchGame\SearchGame.h">
+      <Filter>MiniGame\MiniGame_shuu\SearchGame</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 #include "MiniGameManager.h"
+#include "../MiniGame_shuu/SearchGame/SearchGame.h"
 
 void MiniGameManager::Init()
 {
@@ -34,7 +35,15 @@ void MiniGameManager::Set_NewGame()
 {
 	if (miniGame == nullptr)
 	{
-		miniGame = new MiniGameBase;
+		switch ((MiniGameKind)GetRand((int)MiniGameKind::MiniGameKindNum - 1))
+		{
+		case MiniGameKind::SearchGame:
+			miniGame = new SearchGame;
+			break;
+		default:
+			break;
+		}
+
 	}
 }
 

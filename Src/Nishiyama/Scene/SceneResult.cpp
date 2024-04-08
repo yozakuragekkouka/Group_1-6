@@ -37,7 +37,7 @@ void SceneResult::Draw()
 	BG_Image.DrawRect();
 	playerImage.DrawRect_Rota_Center();
 
-	scoreFont.Draw_int(ScoreManager::GetScore(1), true, true);
+	scoreFont.Draw_int(ScoreManager::GetScore(0), true, true);
 }
 
 //ƒNƒŠƒAŒãˆ—
