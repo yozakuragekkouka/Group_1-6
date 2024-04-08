@@ -6,6 +6,7 @@ enum BGM_KIND
 {
 	BGM_NONE = -1,
 	BGM_TITLE,
+	BGM_PLAY,
 
 	BGM_NUM
 };
@@ -15,6 +16,9 @@ enum SE_KIND
 {
 	SE_NONE = -1,
 	SE_SELECT,
+	SE_SUCCESS,
+	SE_FAILED,
+	SE_RESULT,
 
 	SE_NUM
 };

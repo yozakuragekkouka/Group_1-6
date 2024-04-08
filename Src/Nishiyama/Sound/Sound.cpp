@@ -6,11 +6,15 @@ SE_Data SoundEffect::SE[SE_NUM];
 const char* BGMkind[BGM_NUM] =
 {
 	"Data/Oda/Sound/TitleBGM.mp3",
+	"Data/Oda/Sound/PlayBGM.mp3",
 };
 
 const char* SEkind[SE_NUM] =
 {
 	"Data/Oda/Sound/SelectSE.mp3",
+	"Data/Oda/Sound/SuccessSE.mp3",
+	"Data/Oda/Sound/FailedSE.mp3",
+	"Data/Oda/Sound/FirstSE.mp3",
 };
 
 //BGMコンストラクタ

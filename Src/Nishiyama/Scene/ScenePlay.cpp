@@ -22,6 +22,8 @@ void ScenePlay::Init()
 	interval.Init();
 	minigame_manager.Init();
 
+	PlayBGM.BGMInit(BGM_PLAY);
+
 	SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_LOOP_PLAY;
 }
 
@@ -35,11 +37,15 @@ void ScenePlay::Step()
 		{
 			if (minigame_manager.Get_MiniGameisClear())
 			{
+				SoundEffect::Play(SE_SUCCESS);
+
 				gameState = GameState::Continue;
 				ScoreManager::AddScore(now_playerNumber, 1);
 			}
 			else
 			{
+				SoundEffect::Play(SE_FAILED);
+
 				gameState = GameState::GameOver;
 			}
 
@@ -107,5 +113,8 @@ void ScenePlay::Fin()
 
 	interval.Fin();
 	minigame_manager.Fin();
+
+	PlayBGM.FinBGM();
+
 	SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_INIT_RESULT;
 }

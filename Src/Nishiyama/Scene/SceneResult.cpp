@@ -19,6 +19,8 @@ void SceneResult::Init()
 	scoreFont.Set_posX(SCREEN_SIZE_X / 2);
 	scoreFont.Set_posY(SCREEN_SIZE_Y / 2);
 
+	SoundEffect::Play(SE_RESULT);
+
 	SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_LOOP_RESULT;
 }
 

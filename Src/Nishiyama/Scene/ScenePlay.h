@@ -3,6 +3,7 @@
 #include "../Interval/Interval.h"
 #include "../MiniGame/MiniGameManager/MiniGameManager.h"
 #include "../GameState/GameState.h"
+#include "../Sound/Sound.h"
 
 class ScenePlay : public SceneBase
 {
@@ -11,6 +12,8 @@ private:
 	GameState gameState;
 	Interval interval;
 	MiniGameManager minigame_manager;
+
+	BGM_Data PlayBGM;
 
 public:
 	void Init();

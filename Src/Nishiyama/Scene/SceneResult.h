@@ -1,6 +1,7 @@
 #pragma once
 #include "Scene.h"
 #include "../NumberFont/NumberFont.h"
+#include "../Sound/Sound.h"
 
 constexpr char RESULT_BG_PATH[128] = "Data/Oda/BackGround/Result.png";
 
