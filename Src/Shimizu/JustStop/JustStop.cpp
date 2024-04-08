@@ -1,101 +1,116 @@
 #include "JustStop.h"
+#include "../../Common.h"
 #include "../../Nishiyama/Input/Input.h"
-#include "../../Nishiyama/Shapes/Shapes.h"
 
-#define LINEY 400.0f
-#define HEIGHT 20
+#define LINEY 620.0f
+#define HEIGHT 50
 
-void JustStop::Init() {
-	handle = LoadGraph("Data/Image/");
-	IsPush = false;
-	X = 0.0f;
-	Y = 0.0f;
-	LineY = LINEY;
-	Startlimit = 210.0f;
+JustStop::~JustStop()
+{
+	back.RectFin();
+
+	DeleteGraph(Buf_Screen);
+
+	if (GetMouseDispFlag() == FALSE)
+	{
+		SetMouseDispFlag(TRUE);
+	}
 }
 
-void JustStop::Play() {
-	Startlimit--;
-	if (Startlimit <= 0) {
-		//ボタンが押されたら下降をストップ
-		if ((GetMouseInput() & MOUSE_INPUT_LEFT)) {
-			IsPush = true;
-		}
+void JustStop::Init() {
+	if (GetMouseDispFlag() == TRUE)
+	{
+		SetMouseDispFlag(FALSE);
+	}
 
-		//IsPushが押されるまで下降する
-		if (!IsPush) {
-			Y += 5;
-		}
-		else//下降が止まれば終了
-			isFinish = true;
+	IsPush = false;
+	X = SCREEN_SIZE_X / 2 - 45;
+	Y = 120.0f;
+	LineY = LINEY;
 
-		if (GetDistance(Y, LineY, HEIGHT) < 0) {//矩形が線を越えたら終了
-			isFinish = true;
-		}
+	isClear = false;
+	isFinish = false;
 
-		if (isFinish) {//ゲームが終了したらポイントを取得する
-			GetPoint(GetDistance(Y, LineY, HEIGHT));//代入
-		}
+	strcpy_s(toDo, "丁度で止めろ！");
+
+	Buf_Screen = MakeScreen(SCREEN_SIZE_X, SCREEN_SIZE_Y, TRUE);
+
+	back.RectInit(LoadGraph(JUST_BACK_PATH), VGet(0.0f, 0.0f, 0.0f), 1280, 720);
+}
+
+void JustStop::Step() {
+	SetDrawScreen(Buf_Screen);
+	ClearDrawScreen();
+	SetDrawScreen(DX_SCREEN_BACK);
+
+	//ボタンが押されたら下降をストップ
+	if ((GetMouseInput() & MOUSE_INPUT_LEFT)) {
+		IsPush = true;
+		isFinish = true;
+	}
+
+	//IsPushが押されるまで下降する
+	if (!IsPush) {
+		Y += 5;
+	}
+
+	if (GetDistance(Y, LineY, HEIGHT) < 0) {//矩形が線を越えたら終了
+		isFinish = true;
+	}
+
+	if (GetPoint(GetDistance(Y, LineY, HEIGHT))) {
+		isClear = true;
+	}
+
+	MiniGame_FrameCount++;
+	if (MiniGame_FrameCount >= MINIGAME_MAXTIME)
+	{
+		isFinish = true;
 	}
 }
 
 void JustStop::Draw() {
-	CountDown();
+
+	SetDrawScreen(DX_SCREEN_BACK);
+
+	back.DrawRect();
+
+	DrawLine(0, LINEY, SCREEN_SIZE_X, LINEY, GetColor(0, 0, 0));
 
 	if (!(GetDistance(Y, LineY,HEIGHT) < 0)) {//矩形が線を越えていなければ
-		DrawGraph(X, Y, handle, true);
+		DrawBox(X, Y, X + 50, Y + HEIGHT, GetColor(0, 0, 0), true);
 	}
+
+	DrawString(SCREEN_SIZE_X / 2 - 50, 100, toDo, GetColor(0, 0, 0));
+
+	DrawFormatString(0, 0, GetColor(0, 0, 0), "%f", Y);
+
+	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
+	SetDrawScreen(DX_SCREEN_BACK);
 }
 
 void JustStop::Fin() {
-	DeleteGraph(handle);
+	back.RectFin();
+	
+	DeleteGraph(Buf_Screen);
+
+	if (GetMouseDispFlag() == FALSE)
+	{
+		SetMouseDispFlag(TRUE);
+	}
 }
 
 float JustStop::GetDistance(float rectY, float lineY, float height) {
 	return lineY - (height + rectY);
 }
 
-float JustStop::GetPoint(float dist) {
+bool JustStop::GetPoint(float dist) {
 	int point = 0;
-	float i = LINEY / 100.0f;
 
-	if (dist >= 0 && dist < 5 * i) {
-		point = 100;
-	}
-	if (dist >= 5 && dist < 20 * i) {
-		point = 80;
-	}
-	if (dist >= 20 * i && dist < 40 * i) {
-		point = 60;
-	}
-	if (dist >= 40 * i && dist < 60 * i) {
-		point = 40;
-	}
-	if (dist >= 60 * i && dist < 80 * i) {
-		point = 20;
-	}
-	if (dist >= 80 * i && dist <= 100 * i) {
-		point = 10;
-	}
-	if (dist < 0) {
-		point = 0;
+	if (dist >= 0 && dist < 5) {
+		return true;
 	}
 
-	return point;
+	return false;
 }
 
-void JustStop::CountDown() {
-	//3,2,1のカウントダウン画像を配列で順番に表示
-	if (Startlimit <= 210.0f && Startlimit > 150.0f) {	//3
-		DrawFormatString(100, 100, GetColor(255, 255, 255), "3");
-	}
-	if (Startlimit <= 150.0f && Startlimit > 90.0f) {	//2
-		DrawFormatString(100, 100, GetColor(255, 255, 255), "2");
-	}
-	if (Startlimit <= 90.0f && Startlimit > 30.0f) {	//1
-		DrawFormatString(100, 100, GetColor(255, 255, 255), "1");
-	}
-	if (Startlimit <= 30.0f && Startlimit > 0.0f) {		//start
-		DrawFormatString(100, 100, GetColor(255, 255, 255), "start");
-	}
-}
