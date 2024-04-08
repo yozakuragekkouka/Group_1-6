@@ -1,5 +1,5 @@
 #pragma once
-#include "../../Src/Nishiyama/MiniGame/MiniGameBase/MiniGameBase.h"
+#include "../../Nishiyama/MiniGame/MiniGameBase/MiniGameBase.h"
 
 class JustStop : public MiniGameBase{
 protected:

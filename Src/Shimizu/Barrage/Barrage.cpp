@@ -1,6 +1,6 @@
 #include "Barrage.h"
-#include "../Nishiyama/Input/Input.h"
-#include "../Nishiyama/Shapes/Shapes.h"
+#include "../../Nishiyama/Input/Input.h"
+#include "../../Nishiyama/Shapes/Shapes.h"
 
 const int MAX_COUNT = 40;
 

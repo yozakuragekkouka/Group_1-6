@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 #include "RapidPress.h"
-#include "../Nishiyama/Input/Input.h"
+#include "../../Nishiyama/Input/Input.h"
 
 const int MIN = 60, MAX = 300;//ç≈ë¨1ïb,ç≈íx5ïbÇ≈èoåª
 

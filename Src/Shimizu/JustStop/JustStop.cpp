@@ -1,6 +1,6 @@
 #include "JustStop.h"
-#include "../Nishiyama/Input/Input.h"
-#include "../Nishiyama/Shapes/Shapes.h"
+#include "../../Nishiyama/Input/Input.h"
+#include "../../Nishiyama/Shapes/Shapes.h"
 
 #define LINEY 400.0f
 #define HEIGHT 20

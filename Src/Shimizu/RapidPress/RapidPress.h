@@ -1,5 +1,5 @@
 #pragma once
-#include "../Nishiyama/MiniGame/MiniGameBase/MiniGameBase.h"
+#include "../../Nishiyama/MiniGame/MiniGameBase/MiniGameBase.h"
 
 class RapidPress : public MiniGameBase {
 private:
