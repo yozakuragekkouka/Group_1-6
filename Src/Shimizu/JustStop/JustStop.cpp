@@ -49,6 +49,12 @@ void JustStop::Step() {
 		isFinish = true;
 	}
 
+	if (IsPush) {
+		if (GetPoint(GetDistance(Y, LineY, HEIGHT))) {
+			isClear = true;
+		}
+	}
+
 	//IsPushÇ™âüÇ≥ÇÍÇÈÇ‹Ç≈â∫ç~Ç∑ÇÈ
 	if (!IsPush) {
 		Y += 5;
@@ -56,10 +62,6 @@ void JustStop::Step() {
 
 	if (GetDistance(Y, LineY, HEIGHT) < 0) {//ãÈå`Ç™ê¸ÇâzÇ¶ÇΩÇÁèIóπ
 		isFinish = true;
-	}
-
-	if (GetPoint(GetDistance(Y, LineY, HEIGHT))) {
-		isClear = true;
 	}
 
 	MiniGame_FrameCount++;
@@ -83,8 +85,6 @@ void JustStop::Draw() {
 
 	DrawString(SCREEN_SIZE_X / 2 - 50, 100, toDo, GetColor(0, 0, 0));
 
-	DrawFormatString(0, 0, GetColor(0, 0, 0), "%f", Y);
-
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
 	SetDrawScreen(DX_SCREEN_BACK);
 }
@@ -107,7 +107,7 @@ float JustStop::GetDistance(float rectY, float lineY, float height) {
 bool JustStop::GetPoint(float dist) {
 	int point = 0;
 
-	if (dist >= 0 && dist < 5) {
+	if (dist >= 0 && dist < 20) {
 		return true;
 	}
 
