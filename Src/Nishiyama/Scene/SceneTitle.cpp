@@ -14,6 +14,7 @@ void SceneTitle::Init()
 
 	TitleSoloText.RectInit(LoadGraph(TITLE_SOLO_TEXT_PATH), VGet((float)(SCREEN_SIZE_X / 2), (float)(SCREEN_SIZE_Y / 2) + 100.0f, 0.0f), 350, 66);
 	TitleMultiText.RectInit(LoadGraph(TITLE_MULTI_TEXT_PATH), VGet((float)(SCREEN_SIZE_X / 2), (float)(SCREEN_SIZE_Y / 2) + 200.0f, 0.0f), 350, 66);
+	TitleMusText.RectInit(LoadGraph(TITLE_MUS_TEXT_PATH), VGet(105.0f, (float)SCREEN_SIZE_Y - 37, 0.0f), 200, 64);
 	
 	for (int i = 0; i < 4; i++)
 	{
@@ -55,6 +56,7 @@ void SceneTitle::Draw()
 	TitleImage.DrawRect();
 	TitleSoloText.DrawRect_Rota_Center();
 	TitleMultiText.DrawRect_Rota_Center();
+	TitleMusText.DrawRect_Rota_Center();
 
 	Player[multiNum].DrawRect_Rota_Center();
 }

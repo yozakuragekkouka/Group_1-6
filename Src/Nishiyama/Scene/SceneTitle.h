@@ -6,6 +6,7 @@
 constexpr char TITLE_BG_PATH[128] = "Data/Oda/BackGround/Title.png";
 constexpr char TITLE_SOLO_TEXT_PATH[128] = "Data/Oda/Title/Solo.png";
 constexpr char TITLE_MULTI_TEXT_PATH[128] = "Data/Oda/Title/Multi.png";
+constexpr char TITLE_MUS_TEXT_PATH[128] = "Data/Oda/Title/MusMus.png";
 
 constexpr char TITLE_MULTI_PLAYER_PATH[4][128] =
 {
@@ -23,6 +24,7 @@ private:
 
 	Rect_Data TitleSoloText;
 	Rect_Data TitleMultiText;
+	Rect_Data TitleMusText;
 	Rect_Data Player[4];
 
 	BGM_Data TitleBGM;
