@@ -6,6 +6,9 @@ enum class MiniGameKind
 {
 	GAME_NONE = -1,
 	SearchGame,
+	BarrageGame,
+	JustStopGame,
+	RapidPressGame,
 
 	MiniGameKindNum
 };

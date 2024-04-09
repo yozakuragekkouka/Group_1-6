@@ -1,5 +1,9 @@
 #include "MiniGameManager.h"
 #include "../MiniGame_shuu/SearchGame/SearchGame.h"
+#include "../../../Shimizu/Barrage/Barrage.h"
+#include "../../../Shimizu/JustStop/JustStop.h"
+#include "../../../Shimizu/RapidPress/RapidPress.h"
+
 
 void MiniGameManager::Init()
 {
@@ -39,6 +43,15 @@ void MiniGameManager::Set_NewGame()
 		{
 		case MiniGameKind::SearchGame:
 			miniGame = new SearchGame;
+			break;
+		case MiniGameKind::BarrageGame:
+			miniGame = new Barrage;
+			break;
+		case MiniGameKind::JustStopGame:
+			miniGame = new JustStop;
+			break;
+		case MiniGameKind::RapidPressGame:
+			miniGame = new RapidPress;
 			break;
 		default:
 			break;

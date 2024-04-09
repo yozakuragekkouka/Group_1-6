@@ -36,6 +36,9 @@
     <ClCompile Include="Src\Nishiyama\Shapes\Shapes.cpp" />
     <ClCompile Include="Src\Nishiyama\Sound\Sound.cpp" />
     <ClCompile Include="Src\Nishiyama\Vector\Vector.cpp" />
+    <ClCompile Include="Src\Shimizu\Barrage\Barrage.cpp" />
+    <ClCompile Include="Src\Shimizu\JustStop\JustStop.cpp" />
+    <ClCompile Include="Src\Shimizu\RapidPress\RapidPress.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h" />
@@ -57,6 +60,9 @@
     <ClInclude Include="Src\Nishiyama\Shapes\Shapes.h" />
     <ClInclude Include="Src\Nishiyama\Sound\Sound.h" />
     <ClInclude Include="Src\Nishiyama\Vector\Vector.h" />
+    <ClInclude Include="Src\Shimizu\Barrage\Barrage.h" />
+    <ClInclude Include="Src\Shimizu\JustStop\JustStop.h" />
+    <ClInclude Include="Src\Shimizu\RapidPress\RapidPress.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
