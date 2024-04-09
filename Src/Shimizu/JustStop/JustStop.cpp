@@ -107,7 +107,7 @@ float JustStop::GetDistance(float rectY, float lineY, float height) {
 bool JustStop::GetPoint(float dist) {
 	int point = 0;
 
-	if (dist >= 0 && dist < 20) {
+	if (dist >= 0 && dist < 10) {
 		return true;
 	}
 
